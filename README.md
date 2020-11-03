@@ -11,9 +11,9 @@
 | last_name         | string    |             |
 | first_name_kana   | string    |             |
 | last_name_kana    | string    |             |
-| year              | integer   |             |
-| month             | integer   |             |
-| day               | integer   |             |
+| year              | date      |             |
+| month             | date      |             |
+| day               | date      |             |
 
 ### Association
 
@@ -26,15 +26,14 @@
 | -------- | ------     | -----------                    |
 | name     | string     |                                |
 | content  | text       |                                |
-| category | string     |                                |
-| status   | string     |                                | 
-| cost     | string     |                                |
-| area     | string     |                                |
-| date     | string     |                                |
+| category | integer    |                                |
+| status   | integer    |                                | 
+| cost     | integer    |                                |
+| area     | integer    |                                |
+| date     | integer    |                                |
 | price    | integer    |                                |
 | image    |            |                                |activestorageで実装
 | user     | references |              foreign_key: true |
-| buyer    | references |              foreign_key: true |
 
 ###Association
 
@@ -46,10 +45,6 @@
 
 | Column          | Type       | Options                       |
 | --------------  | ---------- | ----------------------------- |
-| credit_number   | integer    |                               |
-| credit_month    | integer    |                               |
-| credit_year     | integer    |                               |
-| credit_security | integer    |                               |
 | postnumber      | integer    |                               |
 | area1           | string     |                               |
 | area2           | string     |                               |
