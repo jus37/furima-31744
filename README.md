@@ -38,7 +38,7 @@
 - has_one :buyer
 
 
-##buyer テーブル
+##buyers テーブル
 
 | Column          | Type       | Options                       |
 | --------------  | ---------- | ----------------------------- |
@@ -51,7 +51,7 @@
 - belongs_to :item
 - has_one :buyer_address
 
-##buyer_address テーブル
+##buyer_addresses テーブル
 
 
 | Column          | Type       | Options                       |
