@@ -28,7 +28,7 @@
 | status_id   | integer    | null: false                    | 
 | cost_id     | integer    | null: false                    |
 | area_id     | integer    | null: false                    |
-| days_id     | integer    | null: false                    |
+| send_day_id | integer    | null: false                    |
 | price       | integer    | null: false                    |
 | user        | references | null: false, foreign_key: true |
 
