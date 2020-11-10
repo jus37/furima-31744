@@ -2,8 +2,9 @@ class BuyersController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @buyers = Buyer.all
     @item = Item.find(params[:item_id])
-    if current_user.id = @item.user.id
+    if current_user.id == @item.user.id || @buyers.exists?(item_id: item.id)
       redirect_to root_path
       return
     end
