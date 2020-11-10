@@ -12,18 +12,6 @@ RSpec.describe BuyInformation, type: :model do
       it 'すべてただしく入力されている' do
         expect(@order).to be_valid
       end
-      it '郵便番号にハイフンがついている' do
-        @order.postnumber = '123-4567'
-        expect(@order).to be_valid
-      end
-      it '都道府県が--以外で入力されている' do
-        @order.area_id = '2'
-        expect(@order).to be_valid
-      end
-      it '電話番号が11桁以下で入力されている' do
-        @order.telephonenumber = '1234568901'
-        expect(@order).to be_valid
-      end
     end
     context '購入機能がうまくいかないとき' do
       it '郵便番号が空白である' do
