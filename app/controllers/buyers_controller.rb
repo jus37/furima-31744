@@ -3,8 +3,7 @@ class BuyersController < ApplicationController
   before_action :get_item
 
   def index
-    @buyers = Buyer.all
-    if current_user.id == @item.user.id || @buyers.exists?(item_id: @item.id)
+    unless current_user.id != @item.user.id || @item.buyer.nil?
       redirect_to root_path
       return
     end

@@ -12,6 +12,10 @@ RSpec.describe BuyInformation, type: :model do
       it 'すべてただしく入力されている' do
         expect(@order).to be_valid
       end
+      it '建物名が空でも保存できる' do
+        @order.building_name = ''
+        expect(@order).to be_valid
+      end
     end
     context '購入機能がうまくいかないとき' do
       it '郵便番号が空白である' do

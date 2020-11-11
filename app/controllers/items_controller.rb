@@ -4,7 +4,6 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.order('created_at  DESC')
-    @buyers = Buyer.all
   end
 
   def new
@@ -21,7 +20,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @buyers = Buyer.all
   end
 
   def edit
@@ -37,7 +35,6 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @buyers = Buyer.all
     @item.destroy if current_user.id == @item.user.id
     redirect_to root_path
   end
