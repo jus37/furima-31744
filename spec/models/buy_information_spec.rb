@@ -53,6 +53,11 @@ RSpec.describe BuyInformation, type: :model do
         @order.valid?
         expect(@order.errors.full_messages).to include("Telephonenumber is too long (maximum is 11 characters)")
       end
+      it '電話番号に数字以外が含まれている' do
+        @order.telephonenumber = '111-111-111'
+        @order.valid?
+        expect(@order.errors.full_messages).to include("Telephonenumber is invalid")
+      end
       it 'トークンが空である' do
         @order.token = ''
         @order.valid?
